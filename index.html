@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Car Black Box on NodeMCU</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Black Box Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="left">
-      <h1>Car Black Box</h1>
-      <p>This project ports a traditional car black box system onto a NodeMCU (ESP8266), enabling real-time event logging, EEPROM storage, and user interaction via keypad and LCD.</p>
-      <p>Original system used a PIC microcontroller, and has been re-implemented in bare-metal C for the ESP8266 platform.</p>
-    </div>
-    <div class="right">
-      <img src="schematic.png" alt="NodeMCU Schematic" />
-    </div>
-  </div>
+  <h1>Car Black Box Project</h1>
+
+  <p>This project involves porting a traditional car black box system to the NodeMCU (ESP8266). It captures essential driving data — such as speed, acceleration, and braking events — and stores them in non-volatile EEPROM using I2C communication. An LCD and matrix keypad enable basic interaction and data retrieval.</p>
+
+  <h2>Original Architecture</h2>
+  <p>The system was originally built using the PIC18F4580 microcontroller. Data from various sensors was recorded and displayed via peripherals, using low-level C code and direct register manipulation.</p>
+
+  <h2>Porting to NodeMCU</h2>
+  <p>The core logic is now ported to the NodeMCU (ESP8266), preserving all features but adding wireless monitoring. The firmware is written in bare-metal C (no RTOS), and interacts with EEPROM, LCD, and keypad using GPIOs and I2C.</p>
+
+  <h2>Schematic Diagram</h2>
+  <img src="images/schematic.png" alt="NodeMCU Car Black Box Schematic">
+
+  <h2>Conclusion</h2>
+  <p>This port modernizes the original black box using Wi-Fi-enabled hardware while retaining low-level control. It demonstrates real-world use of microcontroller peripherals and embedded data logging techniques.</p>
 </body>
 </html>
